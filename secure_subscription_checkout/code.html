@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Subscription Checkout - SRDGINTEL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light dark:bg-background-dark/80 ios-blur p-4 border-b border-slate-200 dark:border-slate-800 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Checkout</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-lg h-12 bg-transparent text-primary">
+<span class="material-symbols-outlined">lock</span>
+</button>
+</div>
+</div>
+<main class="flex flex-col gap-6 p-4 max-w-md mx-auto w-full">
+<!-- Order Summary Section -->
+<section>
+<h3 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400 mb-3 px-1">Order Summary</h3>
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white dark:bg-[#182234] p-4 shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-primary text-xs font-bold uppercase tracking-wider">Plan Selected</p>
+<p class="text-lg font-bold leading-tight">AI Content Pro</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal">Everything in Plus + Video AI</p>
+<div class="mt-2 text-2xl font-bold text-primary">$29.99 <span class="text-sm font-normal text-slate-400">/ month</span></div>
+</div>
+<div class="w-32 bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-none border border-slate-100 dark:border-slate-700" data-alt="Abstract blue digital network patterns representing AI technology" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGjiJ2B6HgZQ8XAoaSGFUvhkLQScgo1ZRs90Nl7Z9lVbTZMKATjOsL-DP8fw4mP-XuFaVVA8ZE7fAWClBtTB3ppVJ-FycKWvyceD0yHw0miu7UV5t9jrZIlrzQbiWJS5RKgq0-iI4S4CoP1UqIx7ingYehzbtt7G1bameE4Ro9ywQpgXnCP6y3GmNHJBF-LPlxz9X85tT2Yfsrzt7rMEnOFlNgP4-A4PgPHzwbb7E1cGRJMl_94qDBVyIeuRdDr3r03a8oyjWuWxU");'>
+</div>
+</div>
+</section>
+<!-- Payment Method Segmented Control -->
+<section>
+<div class="flex items-center justify-between mb-3 px-1">
+<h3 class="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">Payment Method</h3>
+</div>
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-slate-200 dark:bg-[#222f49] p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#101623] has-[:checked]:shadow-md transition-all duration-200 text-slate-500 dark:text-[#90a4cb] has-[:checked]:text-primary dark:has-[:checked]:text-white text-sm font-bold">
+<span class="truncate">Card</span>
+<input checked="" class="invisible w-0" name="payment_type" type="radio" value="card"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#101623] has-[:checked]:shadow-md transition-all duration-200 text-slate-500 dark:text-[#90a4cb] has-[:checked]:text-primary dark:has-[:checked]:text-white text-sm font-bold">
+<span class="truncate">PayPal</span>
+<input class="invisible w-0" name="payment_type" type="radio" value="paypal"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-[#101623] has-[:checked]:shadow-md transition-all duration-200 text-slate-500 dark:text-[#90a4cb] has-[:checked]:text-primary dark:has-[:checked]:text-white text-sm font-bold">
+<span class="truncate">Crypto</span>
+<input class="invisible w-0" name="payment_type" type="radio" value="crypto"/>
+</label>
+</div>
+</section>
+<!-- Payment Inputs -->
+<section class="flex flex-col gap-4">
+<div class="flex flex-col gap-4">
+<label class="flex flex-col w-full">
+<p class="text-sm font-medium leading-normal pb-2 px-1">Cardholder Name</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#314368] bg-white dark:bg-[#182234] h-14 placeholder:text-slate-400 dark:placeholder:text-[#90a4cb] px-4 text-base font-normal" placeholder="John Doe" value=""/>
+</label>
+<label class="flex flex-col w-full">
+<p class="text-sm font-medium leading-normal pb-2 px-1">Card Number</p>
+<div class="flex w-full flex-1 items-stretch rounded-xl border border-slate-200 dark:border-[#314368] overflow-hidden focus-within:ring-2 focus-within:ring-primary/50">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none border-0 bg-white dark:bg-[#182234] h-14 placeholder:text-slate-400 dark:placeholder:text-[#90a4cb] px-4 text-base font-normal leading-normal" placeholder="0000 0000 0000 0000" type="tel" value=""/>
+<div class="text-slate-400 dark:text-[#90a4cb] flex bg-white dark:bg-[#182234] items-center justify-center pr-4">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+</div>
+</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="flex flex-col">
+<p class="text-sm font-medium leading-normal pb-2 px-1">Expiry Date</p>
+<input class="form-input flex w-full resize-none rounded-xl text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#314368] bg-white dark:bg-[#182234] h-14 placeholder:text-slate-400 dark:placeholder:text-[#90a4cb] px-4 text-base font-normal" placeholder="MM/YY" type="text"/>
+</label>
+<label class="flex flex-col">
+<p class="text-sm font-medium leading-normal pb-2 px-1">CVV</p>
+<div class="flex w-full flex-1 items-stretch rounded-xl border border-slate-200 dark:border-[#314368] overflow-hidden focus-within:ring-2 focus-within:ring-primary/50">
+<input class="form-input flex w-full min-w-0 flex-1 border-0 bg-white dark:bg-[#182234] h-14 placeholder:text-slate-400 dark:placeholder:text-[#90a4cb] px-4 text-base font-normal" placeholder="123" type="password"/>
+<div class="text-slate-400 dark:text-[#90a4cb] flex bg-white dark:bg-[#182234] items-center justify-center pr-4">
+<span class="material-symbols-outlined text-lg">info</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="flex items-center justify-center gap-6 py-4 border-y border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-2 text-emerald-500 dark:text-emerald-400">
+<span class="material-symbols-outlined text-lg">verified_user</span>
+<span class="text-xs font-bold uppercase tracking-tighter">SSL Secure</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">encrypted</span>
+<span class="text-xs font-bold uppercase tracking-tighter">AES-256 Bit</span>
+</div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-lg">shield</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Privacy Pro</span>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-2 flex flex-col gap-4">
+<button class="w-full h-16 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Complete Purchase</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-slate-400 dark:text-slate-500 px-8">
+                    By confirming your subscription, you allow SRDGINTEL to charge your card for this and future payments in accordance with our <a class="underline" href="#">Terms of Service</a> and <a class="underline" href="#">Privacy Policy</a>.
+                </p>
+</section>
+</main>
+<!-- Extra spacing for mobile navigation area -->
+<div class="h-10"></div>
+</div>
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gemini Prompt Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #314368;
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 border-b border-slate-200 dark:border-[#314368] justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">auto_awesome</span>
+<h2 class="text-lg font-bold leading-tight tracking-tight">Prompt Architect</h2>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-xl">account_tree</span>
+</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+</div>
+</div>
+<!-- Scaler Indicator -->
+<div class="px-4 py-2">
+<h4 class="text-primary text-[10px] font-bold leading-normal tracking-[0.2em] uppercase text-center opacity-80">SRDGINTEL SCALING ENGINE • OPEN-SOURCE TO GEMINI</h4>
+</div>
+<!-- Composer Section -->
+<div class="px-4 py-2">
+<div class="flex items-start gap-3 bg-white dark:bg-[#182234] p-4 rounded-xl border border-slate-200 dark:border-[#314368] shadow-sm">
+<div class="bg-primary/10 p-2 rounded-lg shrink-0">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<div class="flex-1 space-y-3">
+<textarea class="w-full bg-transparent border-none focus:ring-0 p-0 text-base placeholder:text-slate-400 dark:placeholder:text-[#435c8e] resize-none h-20" placeholder="Enter your seed prompt..."></textarea>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-[#314368]">
+<div class="flex gap-2">
+<button class="p-1.5 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">mic</span>
+</button>
+<button class="p-1.5 text-slate-500 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">attach_file</span>
+</button>
+</div>
+<button class="bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold flex items-center gap-2 hover:bg-blue-600 transition-all shadow-lg shadow-primary/20">
+<span>Architect</span>
+<span class="material-symbols-outlined text-sm">rocket_launch</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabs Selection -->
+<div class="mt-4 px-4 overflow-x-auto no-scrollbar">
+<div class="flex border-b border-slate-200 dark:border-[#314368] gap-6 min-w-max">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2" href="#">
+<p class="text-sm font-bold tracking-wide">Storyboard</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-[#90a4cb] pb-3 pt-2" href="#">
+<p class="text-sm font-bold tracking-wide">Gemini Reasoning</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 dark:text-[#90a4cb] pb-3 pt-2" href="#">
+<p class="text-sm font-bold tracking-wide">Parameters</p>
+</a>
+</div>
+</div>
+<!-- Main Workspace -->
+<div class="flex flex-col p-4 space-y-6 pb-24">
+<!-- Timeline Flow & Storyboard Cards -->
+<div class="grid grid-cols-[32px_1fr] gap-x-4">
+<!-- Sidebar Timeline Indicators -->
+<div class="flex flex-col items-center gap-1 py-4">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/40">
+<span class="material-symbols-outlined text-primary text-base">movie</span>
+</div>
+<div class="w-0.5 bg-slate-200 dark:bg-[#314368] grow my-2"></div>
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-[#314368]">
+<span class="material-symbols-outlined text-slate-400 text-base">group</span>
+</div>
+<div class="w-0.5 bg-slate-200 dark:bg-[#314368] grow my-2"></div>
+<div class="size-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center border border-slate-200 dark:border-[#314368]">
+<span class="material-symbols-outlined text-slate-400 text-base">check_circle</span>
+</div>
+</div>
+<!-- Content Area -->
+<div class="space-y-6">
+<!-- Scene 1 Card -->
+<div class="bg-white dark:bg-[#182234] rounded-xl border border-slate-200 dark:border-[#314368] overflow-hidden shadow-sm">
+<div class="h-32 bg-slate-100 dark:bg-slate-900 relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-2">
+<span class="bg-primary px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase">Scene 1</span>
+<span class="text-white text-xs font-medium">The Neon Descent</span>
+</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Futuristic cyberpunk city with neon lights and heavy fog" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4PYYsPmN2-b0bAOCalGbvzvCAiRPYKE2P00ZrxgQXfQtbO66MLaC_AEqpckT1I4x9e_W2z4e0nr_-_W7KdiBqGsHlBJxTHlFrkbZuVdXoInA-B4yM6baK_KELlBIsdF5ZfEC3cRdPhw8sxvMkbQWTEISdKwW0q1Fb8Ay_o7aFSIzQ2XRE7-hGoFB8DDTAvmRM0cjvtUSY9Mi8KXeGik_BeQeqO0VFzAvuw2jGvh8nE-TxvVIv22D_4AIE4zqgkt6n5JlDzrhttSs')"></div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-xs font-bold text-primary uppercase tracking-wider">Expanded Narrative</p>
+<p class="text-sm text-slate-600 dark:text-[#90a4cb] leading-relaxed">
+                            A lone silhouette descends through the acid rain of Neo-Tokyo. The reflection of flickering holoboards dances on a cracked visor.
+                        </p>
+<div class="flex gap-2 pt-2">
+<span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded text-slate-500">Wide Shot</span>
+<span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded text-slate-500">Mood: Noir</span>
+</div>
+</div>
+</div>
+<!-- Scene 2 Card -->
+<div class="bg-white dark:bg-[#182234] rounded-xl border border-slate-200 dark:border-[#314368] overflow-hidden shadow-sm">
+<div class="h-32 bg-slate-100 dark:bg-slate-900 relative">
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-2">
+<span class="bg-primary px-2 py-0.5 rounded text-[10px] font-bold text-white uppercase">Scene 2</span>
+<span class="text-white text-xs font-medium">System Breach</span>
+</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Complex digital data stream with glowing blue lines" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAticUMsmqozqwo96OwGzHRb9GvDUB9VFDqkGBNZH4uK1cKpIW6gRHNmPxpFYPA79Tq_jZPDK3LceXFxEstabY70PTvK3xncUsG3pAfzoElfnyirmW59YDa5RWZsE_nXi2653c74LqFI31yKjJTVENKXNLdBvhJT8oVfgWYCExvkSjT0Cl_wmux-k8R_xV6S4KOyBRIlYz2xmBF6QW_kCT02u_e5dBS6vBQ5K9E3bLPhfw-_2SSO9LyS3s3ZXYkfvzdSIjql3dX7FQ')"></div>
+</div>
+<div class="p-4 space-y-2">
+<p class="text-xs font-bold text-primary uppercase tracking-wider">Interaction Logic</p>
+<p class="text-sm text-slate-600 dark:text-[#90a4cb] leading-relaxed">
+                            Analyzing character arcs: The protagonist interfaces with the Central Intel hub. Data cascades in a geometric flood.
+                        </p>
+<div class="flex gap-2 pt-2">
+<span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded text-slate-500">Close Up</span>
+<span class="bg-slate-100 dark:bg-slate-800 text-[10px] px-2 py-1 rounded text-slate-500">Tech-Heavy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Reasoning Side-Peek (Phone specific visualization) -->
+<div class="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-xl p-4">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary text-sm animate-pulse">analytics</span>
+<span class="text-xs font-bold uppercase tracking-widest text-primary">Gemini Reasoning Log</span>
+</div>
+<div class="space-y-2 font-mono text-[10px] text-slate-500 dark:text-blue-300/60">
+<p>&gt; [08:42:11] Expanding prompt context via SRDGINTEL...</p>
+<p>&gt; [08:42:12] Cross-referencing visual parameters with Scene 1...</p>
+<p>&gt; [08:42:14] Generating storyboard frames (3/3 completed)...</p>
+<p>&gt; [08:42:15] Ready for review.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation / Floating Action Area -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-sm flex items-center justify-between bg-white dark:bg-[#182234] border border-slate-200 dark:border-[#314368] rounded-full p-2 shadow-2xl backdrop-blur-md">
+<button class="flex items-center justify-center size-12 rounded-full text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">dashboard</span>
+</button>
+<button class="flex items-center justify-center size-12 rounded-full text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">history</span>
+</button>
+<div class="relative -top-6">
+<button class="bg-primary text-white size-16 rounded-full flex items-center justify-center shadow-xl shadow-primary/40 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+<button class="flex items-center justify-center size-12 rounded-full text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">auto_graph</span>
+</button>
+<button class="flex items-center justify-center size-12 rounded-full text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</body></html>

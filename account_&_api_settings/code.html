@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Account &amp; API Settings - SRDGINTEL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .status-pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white antialiased">
+<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- TopAppBar -->
+<div class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between border-b border-[#314368]/20">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Account &amp; API Settings</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-12 bg-transparent text-slate-900 dark:text-white p-0">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+<!-- ProfileHeader -->
+<div class="flex p-6 @container">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-24 w-24 border-2 border-primary ring-4 ring-primary/10" data-alt="Professional developer profile avatar with dark background" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkmjO1_Z28WxnQGf8guTTBQlna0-K8a9mu0r-yHiLK-LPGE4QVbazNKO6kCqaMe9AiB5kfe7YEWcFQ6g0t5zUJPzBeuv_WB7_4HPE3MdlBfAnH0duulS4bMdZTG1zknX_HhTHJ82Jk5k3mky9CJ0AZFFjT6BSFbhegTHxkQM7F-qSTJNDij4Lf3LaZppH-Z9NsqOW32kZlN0sCsPOqCccTwradah5Yu2u4Z_bFswLjEEXJYAxX8NHATGE18AUN5pR72oCyPRgspuU");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-green-500 h-4 w-4 rounded-full border-2 border-background-dark"></div>
+</div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] text-center">Alex Chen</p>
+<p class="text-primary text-sm font-semibold tracking-wider uppercase mt-1">Pro Developer Plan</p>
+<p class="text-slate-500 dark:text-[#90a4cb] text-sm font-normal leading-normal text-center">Member since Oct 2023</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader: Developer Settings -->
+<div class="px-4 pb-2 pt-4">
+<h3 class="text-slate-900 dark:text-white text-xs font-bold leading-tight tracking-[0.1em] uppercase opacity-60">Developer Settings</h3>
+</div>
+<!-- API Key Field (TextField Component) -->
+<div class="flex flex-col gap-4 px-4 py-3">
+<label class="flex flex-col w-full">
+<p class="text-slate-700 dark:text-white text-sm font-medium leading-normal pb-2">Primary API Key</p>
+<div class="flex w-full items-stretch rounded-lg shadow-sm">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-0 border border-slate-300 dark:border-[#314368] bg-white dark:bg-[#182234] h-14 placeholder:text-[#90a4cb] p-[15px] rounded-r-none border-r-0 text-base font-mono tracking-widest" readonly="" type="password" value="sk-srdg-••••••••••••••••"/>
+<div class="text-[#90a4cb] flex border border-slate-300 dark:border-[#314368] bg-white dark:bg-[#182234] items-center justify-center px-4 rounded-r-lg border-l-0 cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined">content_copy</span>
+</div>
+</div>
+</label>
+</div>
+<!-- SingleButton: Generate Key -->
+<div class="flex px-4 py-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 flex-1 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined mr-2 text-[20px]">refresh</span>
+<span class="truncate uppercase tracking-wider">Generate New API Key</span>
+</button>
+</div>
+<!-- Integration Status Section -->
+<div class="px-4 pb-2 pt-8">
+<h3 class="text-slate-900 dark:text-white text-xs font-bold leading-tight tracking-[0.1em] uppercase opacity-60">System Integrations</h3>
+</div>
+<!-- Status Cards -->
+<div class="px-4 py-2 space-y-3">
+<!-- Firebase Status -->
+<div class="flex items-center justify-between p-4 rounded-xl border border-slate-300 dark:border-[#314368] bg-white dark:bg-[#182234]">
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-lg bg-orange-500/10 text-orange-500">
+<span class="material-symbols-outlined">database</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-semibold text-sm">Firebase Connection</p>
+<p class="text-slate-500 dark:text-[#90a4cb] text-xs">Production Environment</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-500">
+<div class="h-2 w-2 rounded-full bg-green-500 status-pulse"></div>
+<span class="text-xs font-bold uppercase">Active</span>
+</div>
+</div>
+<!-- Gemini Status -->
+<div class="flex items-center justify-between p-4 rounded-xl border border-slate-300 dark:border-[#314368] bg-white dark:bg-[#182234]">
+<div class="flex items-center gap-3">
+<div class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div>
+<p class="text-slate-900 dark:text-white font-semibold text-sm">Gemini Model</p>
+<p class="text-slate-500 dark:text-[#90a4cb] text-xs">Primary LLM Provider</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+<span class="text-xs font-bold uppercase">Gemini 1.5 Pro</span>
+</div>
+</div>
+</div>
+<!-- Additional Actions -->
+<div class="mt-auto px-4 py-8 space-y-2">
+<button class="w-full flex items-center justify-between p-4 rounded-lg text-slate-700 dark:text-[#90a4cb] hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">description</span>
+<span class="text-sm font-medium">View API Documentation</span>
+</div>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 rounded-lg text-red-500 hover:bg-red-500/10 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="text-sm font-bold">Sign Out</span>
+</div>
+</button>
+</div>
+<div class="h-8"></div>
+</div>
+</body></html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>SRDGINTEL | API &amp; Usage Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: contain;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white transition-colors duration-300">
+<!-- Top Navigation Bar -->
+<nav class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 ios-blur border-b border-slate-200 dark:border-white/10 pt-12 pb-4 px-4">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<div class="flex items-center gap-2">
+<div class="bg-primary p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-[20px]">hub</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">SRDGINTEL</h1>
+</div>
+<div class="flex items-center gap-2 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+</span>
+<span class="text-[11px] font-bold text-emerald-500 tracking-wider uppercase">Live</span>
+</div>
+</div>
+</nav>
+<main class="max-w-md mx-auto pb-32">
+<!-- Gemini API Connection Status -->
+<div class="p-4">
+<div class="bg-slate-100 dark:bg-white/5 rounded-xl p-4 flex items-center justify-between border border-slate-200 dark:border-white/10">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">api</span>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Gemini API Status</p>
+<p class="text-sm font-bold">Connected • 142ms avg</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">chevron_right</span>
+</div>
+</div>
+<!-- Key Metrics Cards -->
+<div class="flex gap-4 p-4 pt-0">
+<div class="flex-1 flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-[#222f49] shadow-sm border border-slate-200 dark:border-transparent">
+<p class="text-slate-500 dark:text-white/70 text-sm font-medium">Usage Credits</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold">$1,240.50</p>
+<div class="flex items-center gap-1 text-[#fa6238]">
+<span class="material-symbols-outlined text-sm">trending_down</span>
+<p class="text-xs font-bold">-12%</p>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-2 rounded-xl p-5 bg-white dark:bg-[#222f49] shadow-sm border border-slate-200 dark:border-transparent">
+<p class="text-slate-500 dark:text-white/70 text-sm font-medium">Active Req</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold">42</p>
+<div class="flex items-center gap-1 text-emerald-500">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<p class="text-xs font-bold">+5%</p>
+</div>
+</div>
+</div>
+<!-- Monthly Budget Usage -->
+<div class="px-4 py-2">
+<div class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-xl p-5 flex flex-col gap-3">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-slate-700 dark:text-white text-sm font-semibold">Monthly Budget Usage</p>
+<p class="text-slate-900 dark:text-white text-sm font-bold tracking-tight">$806 / $1,240</p>
+</div>
+<div class="rounded-full bg-slate-200 dark:bg-[#314368] h-2.5 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 65%;"></div>
+</div>
+<p class="text-slate-500 dark:text-[#90a4cb] text-[11px] font-medium uppercase tracking-wide">65% of limit reached • Renews in 12 days</p>
+</div>
+</div>
+<!-- Charts Section -->
+<div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold px-4 pt-8 pb-2">Token Throughput</h2>
+<div class="px-4 py-2">
+<div class="flex flex-col gap-2 rounded-xl border border-slate-200 dark:border-[#314368] bg-white dark:bg-background-dark p-6 shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div>
+<p class="text-slate-500 dark:text-white/70 text-xs font-bold uppercase tracking-widest mb-1">Tokens per Minute</p>
+<p class="text-slate-900 dark:text-white tracking-tight text-[32px] font-bold">1.2M</p>
+</div>
+<div class="bg-primary/10 text-primary px-2 py-1 rounded text-[10px] font-bold">24H VIEW</div>
+</div>
+<div class="flex gap-1 mb-4">
+<p class="text-slate-400 dark:text-[#90a4cb] text-sm font-medium">Global Usage</p>
+<p class="text-emerald-500 text-sm font-bold">+15%</p>
+</div>
+<div class="flex min-h-[160px] flex-col gap-4">
+<svg fill="none" height="120" preserveaspectratio="none" viewbox="0 0 480 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H0V109Z" fill="url(#chartGradient)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#256af4" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#256af4" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#256af4" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="flex justify-between border-t border-slate-100 dark:border-white/10 pt-4">
+<p class="text-slate-400 dark:text-[#90a4cb] text-[10px] font-bold tracking-tighter">00:00</p>
+<p class="text-slate-400 dark:text-[#90a4cb] text-[10px] font-bold tracking-tighter">08:00</p>
+<p class="text-slate-400 dark:text-[#90a4cb] text-[10px] font-bold tracking-tighter">16:00</p>
+<p class="text-slate-400 dark:text-[#90a4cb] text-[10px] font-bold tracking-tighter">24:00</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Service Health List -->
+<div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold px-4 pt-8 pb-2">Models &amp; Performance</h2>
+<div class="px-4 flex flex-col gap-3">
+<!-- Gemini 1.5 Pro -->
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl border border-slate-200 dark:border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-emerald-500"></div>
+<div>
+<p class="text-sm font-bold">Gemini 1.5 Pro</p>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-tight">Latency: 284ms</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">99.9%</p>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-tight">Success</p>
+</div>
+</div>
+<!-- Gemini 1.5 Flash -->
+<div class="bg-white dark:bg-white/5 p-4 rounded-xl border border-slate-200 dark:border-white/10 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="size-2 rounded-full bg-emerald-500"></div>
+<div>
+<p class="text-sm font-bold">Gemini 1.5 Flash</p>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-tight">Latency: 82ms</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-emerald-500">100%</p>
+<p class="text-[10px] text-slate-500 font-medium uppercase tracking-tight">Success</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Logs -->
+<div>
+<div class="flex items-center justify-between px-4 pt-8 pb-2">
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">Recent Activity</h2>
+<button class="text-primary text-sm font-bold">View Logs</button>
+</div>
+<div class="mx-4 bg-slate-100 dark:bg-slate-900/50 rounded-xl overflow-hidden divide-y divide-slate-200 dark:divide-white/5">
+<div class="p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500 text-sm">check_circle</span>
+<div>
+<p class="text-xs font-mono font-bold">POST /v1/chat/completions</p>
+<p class="text-[10px] text-slate-500">2s ago • key_prod_...7f2</p>
+</div>
+</div>
+<p class="text-[10px] font-bold text-slate-400">200 OK</p>
+</div>
+<div class="p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-emerald-500 text-sm">check_circle</span>
+<div>
+<p class="text-xs font-mono font-bold">POST /v1/embeddings</p>
+<p class="text-[10px] text-slate-500">14s ago • key_prod_...7f2</p>
+</div>
+</div>
+<p class="text-[10px] font-bold text-slate-400">200 OK</p>
+</div>
+<div class="p-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-amber-500 text-sm">warning</span>
+<div>
+<p class="text-xs font-mono font-bold">POST /v1/chat/completions</p>
+<p class="text-[10px] text-slate-500">1m ago • key_test_...3a1</p>
+</div>
+</div>
+<p class="text-[10px] font-bold text-amber-500">429 RATE_LIMIT</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Actions -->
+<div class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-background-dark/90 ios-blur border-t border-slate-200 dark:border-white/10 pb-8 pt-4 px-4">
+<div class="max-w-md mx-auto flex gap-3">
+<button class="flex-1 bg-primary text-white font-bold py-3.5 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-[20px]">add_card</span>
+<span>Add Credits</span>
+</button>
+<button class="w-14 h-14 bg-slate-200 dark:bg-white/10 text-slate-900 dark:text-white rounded-xl flex items-center justify-center active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">key</span>
+</button>
+<button class="w-14 h-14 bg-slate-200 dark:bg-white/10 text-slate-900 dark:text-white rounded-xl flex items-center justify-center active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+</div>
+</body></html>

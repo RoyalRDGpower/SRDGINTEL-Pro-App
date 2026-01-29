@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SRDGINTEL Blog Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center px-4 py-4 justify-between">
+<div class="flex items-center gap-2">
+<div class="flex items-center justify-center size-8 bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined !text-[20px]">bolt</span>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-tight">SRDGINTEL</h2>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white cursor-pointer">search</span>
+<span class="material-symbols-outlined text-white cursor-pointer">account_circle</span>
+</div>
+</div>
+</div>
+<!-- Category Scroller -->
+<div class="flex gap-3 px-4 py-4 overflow-x-auto no-scrollbar scroll-smooth">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary px-5 shadow-lg shadow-primary/20">
+<p class="text-white text-sm font-semibold leading-normal">All Feed</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-[#182234] border border-gray-200 dark:border-gray-700/50 px-5">
+<p class="text-gray-600 dark:text-[#90a4cb] text-sm font-medium leading-normal">AI Trends</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-[#182234] border border-gray-200 dark:border-gray-700/50 px-5">
+<p class="text-gray-600 dark:text-[#90a4cb] text-sm font-medium leading-normal">SEO Optimization</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-[#182234] border border-gray-200 dark:border-gray-700/50 px-5">
+<p class="text-gray-600 dark:text-[#90a4cb] text-sm font-medium leading-normal">Tech Tips</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-gray-100 dark:bg-[#182234] border border-gray-200 dark:border-gray-700/50 px-5">
+<p class="text-gray-600 dark:text-[#90a4cb] text-sm font-medium leading-normal">Video Ops</p>
+</div>
+</div>
+<!-- Main Content -->
+<main class="pb-24">
+<!-- Featured Hero Card -->
+<div class="px-4 py-2 @container">
+<h3 class="text-white text-lg font-bold leading-tight tracking-tight mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">campaign</span>
+                Trending Now
+            </h3>
+<div class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start overflow-hidden shadow-2xl bg-white dark:bg-[#182234] border border-gray-100 dark:border-gray-800">
+<div class="w-full relative bg-center bg-no-repeat aspect-video bg-cover" data-alt="Digital representation of neural network and AI brain concept" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcebBNVaYPz9gxZqv5HbeFRB5cfJF4ieuz0_htWSjd-BdiG9t-AEhmAE_1YamJKW4Oy_D3Bh4NqrdnGU8UD_JigRrHayFd-urAe2AFucFfa-2xT2PAwqe5rYLFjDlLkQcdVua7rmJFhFHwOVfnaJ4mOcRkCfWPP58N1-6E10aChRUiVNmoGyAM5VH-f31jgNjTchfyR0zNJMDfIk-gIv8rRoLkA-jMLEQFGuNlkBExJftV9VzJr6lSJuvhksz3oh4nw-5nyX4JEOs");'>
+<div class="absolute top-4 left-4 bg-primary px-3 py-1 rounded-full flex items-center gap-1.5 shadow-lg">
+<span class="material-symbols-outlined !text-[14px] text-white">verified</span>
+<span class="text-white text-[10px] font-bold tracking-wider uppercase">AI-Verified</span>
+</div>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-5">
+<div class="flex justify-between items-center mb-1">
+<p class="text-primary text-xs font-bold leading-normal uppercase tracking-widest">Featured Report</p>
+<p class="text-gray-400 dark:text-[#90a4cb] text-[10px] font-medium">MAY 2024</p>
+</div>
+<p class="text-gray-900 dark:text-white text-2xl font-bold leading-tight tracking-tight mb-2">The Future of Generative AI in 2024: A Global Shift</p>
+<p class="text-gray-600 dark:text-[#90a4cb] text-sm font-normal leading-relaxed mb-4">Exploring the next frontier of LLMs, creative automation, and the impact on digital marketing workflows.</p>
+<div class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700/50 pt-4 mt-2">
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-medium">8 min read • Editorial Team</p>
+</div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-9 px-4 bg-primary text-white text-sm font-semibold transition-all active:scale-95 shadow-lg shadow-primary/20">
+                            Read Article
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Latest List -->
+<div class="mt-6">
+<h3 class="text-white text-lg font-bold leading-tight tracking-tight px-4 mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schedule</span>
+                Latest Updates
+            </h3>
+<div class="flex flex-col">
+<!-- List Item 1 -->
+<div class="flex gap-4 px-4 py-5 justify-between border-b border-gray-100 dark:border-gray-800/50 active:bg-gray-50 dark:active:bg-[#182234]/50 transition-colors">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-[80px] shrink-0 border border-gray-200 dark:border-gray-700/50" data-alt="Modern office desk with coding setup and analytics on screen" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmtuQEoLA4dQX9npw4ZNTtZq_jsYUqMs0k2xCEpf-E6mWkf0jd2RPhYVh7wtGtZm8k2BMZJl7weFBN7rRTdacl7r6khTthmMmR70ad9IaxPRMtzZr_WAtm2a9jO5_-ZlWSCFoky5GxifCr7nJowvjdmWU1e_Pe-E6LwtHj7soeNavXJ3XLj4NS1n7TzlEppXMZhRTT4QEbtD7Gf0SC0F6OoYzai-5bwjuJcLfBbT-uWquAg0-LnGtmBffsYCQipI9qMg-MeYIxy4c");'></div>
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2">
+<span class="text-[10px] px-2 py-0.5 bg-green-500/10 text-green-500 rounded font-bold">NEW</span>
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">SEO Optimization</p>
+</div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-snug">Mastering Core Web Vitals for 2024 Search Rankings</p>
+<div class="flex items-center gap-3">
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-normal">AI-Verified • 2 days ago</p>
+<span class="size-1 rounded-full bg-gray-400 dark:bg-gray-600"></span>
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-normal">5m read</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex gap-4 px-4 py-5 justify-between border-b border-gray-100 dark:border-gray-800/50 active:bg-gray-50 dark:active:bg-[#182234]/50 transition-colors">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-[80px] shrink-0 border border-gray-200 dark:border-gray-700/50" data-alt="Futuristic robotic hand interacting with digital interface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD_aVcOKx0OXlHP8jQK6S33WHDPDGH9V1Yfbh535gEnrbshKWar8rVjOGJYJIB8KeuJCzVADdBSc1qtGl4O4El0Di96F1NU1ziPCaeUfrXeloKDSbF8aGa21Bxx3lHCY1cLKBYwUmfCIORsZJCLVXxRuXzEgPdlJWTnnbRwrWAZZk_3JMHLVcEXkj6fmhxBdKL1z4kQ-MEFq2kpQIuYjAMkEapIQlhDzOi-r2jDvnf2kV8ozf5i22c7BCD7Na7AvvkEKTY-qfXtKVw");'></div>
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2">
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">AI Trends</p>
+</div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-snug">Prompt Engineering: The Missing Manual for Developers</p>
+<div class="flex items-center gap-3">
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-normal">AI-Verified • 4 days ago</p>
+<span class="size-1 rounded-full bg-gray-400 dark:bg-gray-600"></span>
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-normal">12m read</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex gap-4 px-4 py-5 justify-between border-b border-gray-100 dark:border-gray-800/50 active:bg-gray-50 dark:active:bg-[#182234]/50 transition-colors">
+<div class="flex items-start gap-4 flex-1">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl size-[80px] shrink-0 border border-gray-200 dark:border-gray-700/50" data-alt="Graphic designer working on video editing console" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCxPxpPCxYfQi3GkTqUQUsRDHdaaW7yAUne2rW3cF1fLrdkHLuDx3cjut7gZMRuAcwzgEQzAa37CXKHqoA24dq9W-LWZQpj6dc_E5rNQl0nBxrel5PCmWwxgLVD7O3pQvxfSrqXAjYNcfTbBONJQCIF2L_DSJdoWH0yJELVNXNikFS2S7EqMy5S5G8GQbFFlZVZIuDuB646dKrTcuGaUnjIxvQ6DaWpJ3F8dFxmFsyxgoa3h9x9WCrL_LSw6jiNsR-OxUYDV3NGh-Q");'></div>
+<div class="flex flex-col justify-center gap-1">
+<div class="flex items-center gap-2">
+<p class="text-primary text-[10px] font-bold uppercase tracking-wider">Tech Tips</p>
+</div>
+<p class="text-gray-900 dark:text-white text-base font-semibold leading-snug">Automating Your Video Content with SRDG Tools</p>
+<div class="flex items-center gap-3">
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-normal">Staff Pick • 1 week ago</p>
+<span class="size-1 rounded-full bg-gray-400 dark:bg-gray-600"></span>
+<p class="text-gray-500 dark:text-[#90a4cb] text-xs font-normal">3m read</p>
+</div>
+</div>
+</div>
+<div class="shrink-0 self-center">
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Tab Bar (iOS style) -->
+<div class="fixed bottom-0 left-0 right-0 bg-white/90 dark:bg-[#101622]/90 backdrop-blur-xl border-t border-gray-200 dark:border-gray-800 pb-8 pt-3 px-8 flex justify-between items-center z-50">
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined !text-[28px]">home</span>
+<span class="text-[10px] font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined !text-[28px]">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined !text-[28px]">bookmark</span>
+<span class="text-[10px] font-medium">Saved</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-gray-400">
+<span class="material-symbols-outlined !text-[28px]">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</div>
+</div>
+</body></html>

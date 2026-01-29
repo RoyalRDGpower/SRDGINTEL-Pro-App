@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services &amp; Pricing Plans - SRDGINTEL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#080808", // Obsidian
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .pro-glow {
+            box-shadow: 0 0 20px rgba(37, 106, 244, 0.3);
+            border: 1px solid rgba(37, 106, 244, 0.6) !important;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-white/5">
+<span class="material-symbols-outlined text-white">arrow_back_ios_new</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">SRDGINTEL</h2>
+<span class="text-[10px] text-primary font-bold uppercase tracking-widest">AI Content Studio</span>
+</div>
+<div class="flex w-10 items-center justify-end">
+<button class="flex items-center justify-center rounded-full size-10 bg-white/5 text-white">
+<span class="material-symbols-outlined text-white">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hero Title -->
+<div class="px-6 pt-6 pb-2 max-w-md mx-auto">
+<h1 class="text-3xl font-bold tracking-tight text-white mb-2">Services &amp; Pricing</h1>
+<p class="text-gray-400 text-sm leading-relaxed">Choose the perfect AI-powered tier for your content production needs.</p>
+</div>
+<!-- Billing Toggle -->
+<div class="flex px-6 py-4 max-w-md mx-auto">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-white/5 p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 bg-white/10 shadow-sm text-white text-sm font-semibold transition-all">
+<span class="truncate">Monthly</span>
+<input checked="" class="hidden" name="billing" type="radio" value="monthly"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-lg px-2 text-gray-400 text-sm font-medium transition-all hover:text-white">
+<div class="flex items-center gap-1.5">
+<span class="truncate">Yearly</span>
+<span class="bg-primary/20 text-primary text-[10px] px-1.5 py-0.5 rounded-md font-bold">-20%</span>
+</div>
+<input class="hidden" name="billing" type="radio" value="yearly"/>
+</label>
+</div>
+</div>
+<!-- Pricing Cards Horizontal Carousel -->
+<div class="overflow-x-auto custom-scrollbar flex gap-4 px-6 py-6 snap-x snap-mandatory">
+<!-- Starter Card -->
+<div class="snap-center shrink-0 w-[280px] flex flex-col gap-6 rounded-2xl glass-card p-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 text-lg">bolt</span>
+<h3 class="text-gray-400 text-sm font-bold uppercase tracking-wider">Starter</h3>
+</div>
+<p class="flex items-baseline gap-1 text-white">
+<span class="text-white text-4xl font-bold tracking-tighter">$29</span>
+<span class="text-gray-500 text-sm font-medium">/mo</span>
+</p>
+<p class="text-gray-400 text-xs mt-1">Perfect for hobbyists and individual creators.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    5 AI Video minutes
+                </div>
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    2 SEO Articles
+                </div>
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    Standard Tech Tips
+                </div>
+</div>
+<button class="mt-auto w-full py-3 px-4 bg-white/10 hover:bg-white/20 transition-colors rounded-xl text-white text-sm font-bold">
+                Get Started
+            </button>
+</div>
+<!-- Professional Card (Highlighted) -->
+<div class="snap-center shrink-0 w-[300px] flex flex-col gap-6 rounded-2xl glass-card pro-glow p-6 relative">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary px-4 py-1 rounded-full shadow-lg shadow-primary/40">
+<span class="text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap">Most Popular</span>
+</div>
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">workspace_premium</span>
+<h3 class="text-primary text-sm font-bold uppercase tracking-wider">Professional</h3>
+</div>
+<p class="flex items-baseline gap-1 text-white">
+<span class="text-white text-5xl font-black tracking-tighter">$99</span>
+<span class="text-gray-500 text-sm font-medium">/mo</span>
+</p>
+<p class="text-gray-300 text-xs mt-1">Advanced tools for growing digital teams.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="text-[13px] font-semibold flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">check_circle</span>
+                    30 AI Video minutes
+                </div>
+<div class="text-[13px] font-semibold flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">check_circle</span>
+                    10 SEO Articles
+                </div>
+<div class="text-[13px] font-semibold flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">check_circle</span>
+                    Priority Tech Tips
+                </div>
+<div class="text-[13px] font-semibold flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">check_circle</span>
+                    Email Support
+                </div>
+</div>
+<button class="mt-auto w-full py-4 px-4 bg-primary hover:bg-blue-600 transition-colors rounded-xl text-white text-sm font-bold shadow-lg shadow-primary/20">
+                Choose Professional
+            </button>
+</div>
+<!-- Enterprise Card -->
+<div class="snap-center shrink-0 w-[280px] flex flex-col gap-6 rounded-2xl glass-card p-6">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gray-400 text-lg">corporate_fare</span>
+<h3 class="text-gray-400 text-sm font-bold uppercase tracking-wider">Enterprise</h3>
+</div>
+<p class="flex items-baseline gap-1 text-white">
+<span class="text-white text-4xl font-bold tracking-tighter">Custom</span>
+</p>
+<p class="text-gray-400 text-xs mt-1">Full-scale production with custom pipelines.</p>
+</div>
+<div class="flex flex-col gap-3">
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    Unlimited AI Video
+                </div>
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    Unlimited Articles
+                </div>
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    24/7 Dedicated Support
+                </div>
+<div class="text-[13px] font-medium flex gap-3 text-white items-center">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                    Custom API Access
+                </div>
+</div>
+<button class="mt-auto w-full py-3 px-4 bg-white/10 hover:bg-white/20 transition-colors rounded-xl text-white text-sm font-bold">
+                Contact Sales
+            </button>
+</div>
+</div>
+<!-- Comparison Section -->
+<div class="max-w-md mx-auto px-6 pt-10 pb-24">
+<h2 class="text-2xl font-bold tracking-tight text-white mb-6">Detailed Comparison</h2>
+<!-- Video Specs -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">videocam</span>
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Video Production</h3>
+</div>
+<div class="flex flex-col divide-y divide-white/5 bg-white/5 rounded-2xl px-5">
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Video Resolution</p>
+<p class="text-white text-sm font-bold text-right">Up to 4K</p>
+</div>
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Custom AI Voices</p>
+<p class="text-white text-sm font-bold text-right">Professional</p>
+</div>
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Rendering Speed</p>
+<p class="text-white text-sm font-bold text-right">Turbo</p>
+</div>
+</div>
+</div>
+<!-- Content Specs -->
+<div class="mb-8">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">article</span>
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">SEO &amp; Content</h3>
+</div>
+<div class="flex flex-col divide-y divide-white/5 bg-white/5 rounded-2xl px-5">
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">SEO Optimization</p>
+<p class="text-white text-sm font-bold text-right">Deep Analysis</p>
+</div>
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Internal Linking</p>
+<p class="text-white text-sm font-bold text-right">Automatic</p>
+</div>
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Export Formats</p>
+<p class="text-white text-sm font-bold text-right">WP, PDF, MD</p>
+</div>
+</div>
+</div>
+<!-- Support Specs -->
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary">contact_support</span>
+<h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Account Management</h3>
+</div>
+<div class="flex flex-col divide-y divide-white/5 bg-white/5 rounded-2xl px-5">
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Support Level</p>
+<p class="text-white text-sm font-bold text-right">Priority 24/7</p>
+</div>
+<div class="flex justify-between gap-x-6 py-4">
+<p class="text-gray-300 text-sm font-medium">Tech Tips Channel</p>
+<p class="text-white text-sm font-bold text-right">Exclusive Beta</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent z-50">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary hover:bg-blue-600 transition-all text-white font-bold py-4 rounded-xl shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
+<span>Unlock Professional Access</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-gray-500 mt-3 uppercase tracking-widest font-bold">Secure Stripe Checkout Enabled</p>
+</div>
+</div>
+</body></html>

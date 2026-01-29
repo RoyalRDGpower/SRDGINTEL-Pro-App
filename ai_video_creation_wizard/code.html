@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Video Creation Wizard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#256af4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(24, 34, 52, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary/30">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md p-4 justify-between border-b border-white/5">
+<div class="text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-white/5 cursor-pointer">
+<span class="material-symbols-outlined">close</span>
+</div>
+<div class="flex flex-col items-center">
+<h2 class="text-white text-base font-bold leading-tight tracking-tight">AI Video Wizard</h2>
+<span class="text-[10px] uppercase tracking-widest text-primary font-semibold">SRDGINTEL</span>
+</div>
+<div class="flex size-10 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-white">help_outline</span>
+</button>
+</div>
+</header>
+<!-- Progress Stepper (PageIndicators Modified) -->
+<div class="flex w-full flex-col items-center justify-center gap-2 py-6 px-6">
+<div class="flex w-full items-center justify-between max-w-sm relative">
+<!-- Connecting Line Background -->
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-white/10 -translate-y-1/2 z-0"></div>
+<!-- Progress Line -->
+<div class="absolute top-1/2 left-0 w-1/4 h-[2px] bg-primary -translate-y-1/2 z-0"></div>
+<div class="z-10 flex flex-col items-center gap-1">
+<div class="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-[12px] font-bold shadow-[0_0_15px_rgba(37,106,244,0.5)]">1</div>
+<span class="text-[10px] text-primary font-bold">Prompt</span>
+</div>
+<div class="z-10 flex flex-col items-center gap-1">
+<div class="h-8 w-8 rounded-full bg-[#182234] border border-white/10 flex items-center justify-center text-[12px] font-bold text-white/40">2</div>
+<span class="text-[10px] text-white/40">Style</span>
+</div>
+<div class="z-10 flex flex-col items-center gap-1">
+<div class="h-8 w-8 rounded-full bg-[#182234] border border-white/10 flex items-center justify-center text-[12px] font-bold text-white/40">3</div>
+<span class="text-[10px] text-white/40">Settings</span>
+</div>
+<div class="z-10 flex flex-col items-center gap-1">
+<div class="h-8 w-8 rounded-full bg-[#182234] border border-white/10 flex items-center justify-center text-[12px] font-bold text-white/40">4</div>
+<span class="text-[10px] text-white/40">Render</span>
+</div>
+</div>
+</div>
+<main class="flex-1 flex flex-col gap-6 pb-32">
+<!-- HeadlineText -->
+<div class="px-4">
+<h3 class="text-white tracking-tight text-3xl font-bold leading-tight">Describe your vision</h3>
+<p class="text-[#90a4cb] text-sm mt-1">Provide a detailed prompt for the AI to generate from.</p>
+</div>
+<!-- Preview Window (Side/Top Context) -->
+<div class="px-4">
+<div class="relative aspect-video w-full overflow-hidden rounded-xl glass-card group">
+<img class="h-full w-full object-cover opacity-40 blur-sm scale-105" data-alt="Abstract dark blue and purple neon gradient" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEGqL7VsrD61mc98kzAtTGv6-zG9eNRgkfAmYYmbLulNqt_fByw_bL_HJ44HFLTbtR94_kfyyW-zORVM0xtLpEF77XuaCn965HcYXNC0sq_MZ9tm1qBBytqXXCQH-KnsOK0-PB2tCeNVrHQtRwfb964sLn184BoMIghLcka24jRynn76VOqVPEVvcq7IOhhSBk2XIACyK2taHFmLeQBIQVp-7rS8MVjbDrqQVY5eOeRUY2VRMv_eHJBQL0RbeJvCchqHWcYsRF0mQ"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">videocam</span>
+<p class="text-white/60 text-sm font-medium">Visualization will appear here</p>
+</div>
+<div class="absolute bottom-3 right-3">
+<div class="bg-black/50 backdrop-blur-md border border-white/10 px-2 py-1 rounded text-[10px] font-bold text-white/70">16:9 HD</div>
+</div>
+</div>
+</div>
+<!-- TextField -->
+<div class="px-4">
+<div class="glass-card rounded-xl p-1">
+<textarea class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-transparent min-h-40 placeholder:text-[#90a4cb]/50 p-4 text-base font-normal leading-relaxed" placeholder="A futuristic cityscape at sunset, neon lights reflecting on rain-slicked streets, flying vehicles gliding between skyscrapers..."></textarea>
+</div>
+</div>
+<!-- Mood Tags -->
+<div class="flex flex-col gap-3 px-4">
+<h4 class="text-white/80 text-sm font-bold uppercase tracking-wider px-1">Visual Mood</h4>
+<div class="flex flex-wrap gap-2">
+<button class="px-4 py-2 rounded-full bg-primary text-white text-sm font-bold border border-primary/50 shadow-[0_0_10px_rgba(37,106,244,0.3)]">Cinematic</button>
+<button class="px-4 py-2 rounded-full bg-white/5 text-white/70 text-sm font-medium border border-white/10 hover:bg-white/10 transition-all">Futuristic</button>
+<button class="px-4 py-2 rounded-full bg-white/5 text-white/70 text-sm font-medium border border-white/10 hover:bg-white/10 transition-all">Cyberpunk</button>
+<button class="px-4 py-2 rounded-full bg-white/5 text-white/70 text-sm font-medium border border-white/10 hover:bg-white/10 transition-all">Minimalist</button>
+<button class="px-4 py-2 rounded-full bg-white/5 text-white/70 text-sm font-medium border border-white/10 hover:bg-white/10 transition-all">Anime</button>
+</div>
+</div>
+<!-- ActionPanel -->
+<div class="px-4">
+<div class="flex items-center justify-between gap-4 rounded-xl glass-card p-4">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<p class="text-white text-sm font-bold leading-tight">AI Prompt Enhancer</p>
+<p class="text-[#90a4cb] text-xs font-normal leading-normal">Optimize for high quality</p>
+</div>
+</div>
+<label class="relative flex h-7 w-12 cursor-pointer items-center rounded-full border-none bg-white/10 p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary transition-all">
+<div class="h-6 w-6 rounded-full bg-white shadow-lg"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</main>
+<!-- Fixed Footer Action -->
+<footer class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-dark via-background-dark/90 to-transparent pt-10">
+<button class="w-full h-14 bg-primary rounded-xl flex items-center justify-center gap-2 text-white font-bold text-lg shadow-[0_4px_20px_rgba(37,106,244,0.4)] hover:brightness-110 active:scale-[0.98] transition-all">
+<span>Continue to Style</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Home Indicator for iOS style -->
+<div class="w-32 h-1.5 bg-white/20 rounded-full mx-auto mt-6"></div>
+</footer>
+</div>
+</body></html>
